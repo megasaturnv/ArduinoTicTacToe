@@ -1,5 +1,8 @@
-# ArduinoTicTacToe
-An invincible Tic Tac Toe single player on Arduino Uno/Nano
+# Fork of ArduinoTicTacToe
+https://github.com/klauscam/ArduinoTicTacToe
 
-Buy me a beer using Bitcoin
-## [163anEKNWhuRuv1srtPcvzEw7iLPQnz1qr](bitcoin:163anEKNWhuRuv1srtPcvzEw7iLPQnz1qr)
+## Added additional features
+
+Ran code through Arduino IDE auto formatter. Added: drawing grid number layout (void drawNumberedBoard() ), invalid player number detection, "thinking..." message if the player enters a valid number, an error message if the player enters an invalid number. Changed "move >= 9" to "move > 8" and changed variable type of 'move' and 'player' from int to byte.
+
+Reminder to self: may also change ((move > 8 || move < 0) || board[move] != 0) to (move > 8 || move < 0 || board[move] != 0) since the additional brackets are unnecessary.
