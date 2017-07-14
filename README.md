@@ -25,10 +25,18 @@ Reminder to self: may also change ((move > 8 || move < 0) || board[move] != 0) t
 * Updated drawNumberedBoard() to match grid number changes
 * Added physical button support on pins 4-12
 * Added more data validation for moves received via the serial port
-* Fixed selecting random player type ( O / X ) if the player enters an invalid number. In the previous version the Arduino would always pick X
+* Fixed selecting random player type ( O / X ) if the player enters an invalid number. In the previous version the Arduino would always pick 'X' (So the player would always go first)
 * Fixed bug with 'Thinking...' message
 * Renamed TicTacToe.ino to ArduinoTicTacToe.ino
 
+## Version 3
+* Fixed bug with 'Would you like to play as X / O' message. Replaced with 'Would you like to play 1st or second' (Player will always play as 'X')
+* Added #define BAUD_RATE. Modify BAUD_RATE to change the UART serial baud rate. Default value is 9600
+* Added "Type anything or press any button to continue" message after every game
+* Moved drawNumberedBoard(); inside setup() since the grid layout is now more intuative for keyboard users. This means the grid layout won't be printed at the start of every game
+* Added message to say how long the Arduino was thinking for in milliseconds
+* Added message which says 'You played X in position [Grid position]'
+
 ## To do
-* Add 'Would you like to play again?' message
-* Say how long the Arduino was thinking for in milliseconds
+* Fix bug where no error message is sent if player enters numbers larger than 9 as their position on the grid. Error message is sent if number = 0 or previously used grid space
+* Add option to see the grid layout again at end of round (type '5' or press the middle button)
