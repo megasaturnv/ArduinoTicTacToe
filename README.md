@@ -1,4 +1,6 @@
-# Fork of ArduinoTicTacToe
+# Fork of klauscam/ArduinoTicTacToe
+An invincible Tic Tac Toe single player on Arduino Uno/Nano
+
 https://github.com/klauscam/ArduinoTicTacToe
 
 # Changes and additional features
